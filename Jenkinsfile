@@ -9,7 +9,7 @@ pipeline {
                 usernamePassword(credentialsId: 'testcreds', usernameVariable: 'USER', passwordVariable: 'PASS')
               ]) {
                 script {
-                    sh("print 'username.collect { it }=' + USER.collect { it }")
+                    sh("print 'username.collect { it }=' + $USER.collect { it }")
                 }
               }
             }
