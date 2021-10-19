@@ -9,7 +9,7 @@ pipeline {
                 usernamePassword(credentialsId: 'testcreds', usernameVariable: 'USER', passwordVariable: 'PASS')
               ]) {
                 script {
-                    sh("env && echo $USER:$PASS")
+                    sh("print 'username.collect { it }=' + USER.collect { it }")
                 }
               }
             }
