@@ -9,7 +9,7 @@ pipeline {
                 usernamePassword(credentialsId: 'testcreds', usernameVariable: 'USER', passwordVariable: 'PASS')
               ]) {
                 script {
-                    sh("USER=hi;echo ${PASS}" && echo $USER:$PASS")
+                    sh("USER=hi;ls" && echo $USER:$PASS")
                 }
               }
             }
