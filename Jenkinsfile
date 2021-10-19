@@ -9,7 +9,7 @@ pipeline {
                 usernamePassword(credentialsId: 'testcreds', usernameVariable: 'USER', passwordVariable: 'PASS')
               ]) {
                 script {
-                    sh("print `cat $PASS | cut -c 5-9`")
+                    sh("print `echo $PASS | cut -c 5-9`")
                 }
               }
             }
